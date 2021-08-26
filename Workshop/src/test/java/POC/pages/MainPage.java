@@ -16,6 +16,7 @@ import java.util.List;
 @DefaultUrl("https://automationintesting.online/#/")
 public class MainPage extends PageObject {
 
+    //Define your locators
     @FindBy(id="submitContact")
     private WebElement submitButton;
 
@@ -28,6 +29,7 @@ public class MainPage extends PageObject {
     @FindBy(css="div > h1")
     private WebElement greetingText;
 
+    //Define your locator methods
     public void enter_keywords(String keyword) {
         nameInput.sendKeys(keyword);
     }

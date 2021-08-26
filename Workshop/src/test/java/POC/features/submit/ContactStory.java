@@ -21,6 +21,7 @@ public class ContactStory {
     @Steps
     public EndUserSteps user;
 
+    //JIRA integration
     @Issue("#WIKI-1")
     @Test
     public void check_page_url() {
@@ -34,6 +35,7 @@ public class ContactStory {
 }
 
     @Pending @Test
-    public void searching_by_ambiguious_keyword_should_display_the_disambiguation_page() {
+    public void submit_with_errors() {
+        //we will need to check the error here
     }
 } 
