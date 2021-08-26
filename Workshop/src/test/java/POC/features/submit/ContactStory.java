@@ -1,4 +1,4 @@
-package POC.features.search;
+package POC.features.submit;
 
 import net.serenitybdd.junit.runners.SerenityRunner;
 import net.thucydides.core.annotations.Issue;
@@ -28,12 +28,10 @@ public class ContactStory {
 
     }
 
-    @Test
+    @Pending @Test
     public void submit_contact_form() {
-        user.is_the_home_page();
-        //user.looks_for("pear");
-        //user.should_see_definition("An edible fruit produced by the pear tree, similar to an apple but elongated towards the stem.");
-    }
+        //add code to submit form;
+}
 
     @Pending @Test
     public void searching_by_ambiguious_keyword_should_display_the_disambiguation_page() {

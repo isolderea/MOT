@@ -4,8 +4,7 @@ import POC.pages.MainPage;
 import net.thucydides.core.annotations.Step;
 
 import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.containsString;
-import static org.hamcrest.Matchers.hasItem;
+import static org.hamcrest.Matchers.*;
 
 public class EndUserSteps {
 
@@ -19,6 +18,8 @@ public class EndUserSteps {
     @Step
     public void is_the_home_page() {
         HomePage.open();
+        String title = HomePage.get_greeting_text();
+        assertThat(title, containsString("Welcomed"));
     }
 
     @Step

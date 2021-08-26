@@ -8,6 +8,7 @@ import java.util.stream.Collectors;
 import net.serenitybdd.core.annotations.findby.FindBy;
 
 import net.thucydides.core.pages.PageObject;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 import java.util.List;
@@ -21,8 +22,18 @@ public class MainPage extends PageObject {
     @FindBy(id="name")
     private WebElement nameInput;
 
+    @FindBy(id="email")
+    private WebElement emailInput;
+
+    @FindBy(css="div > h1")
+    private WebElement greetingText;
+
     public void enter_keywords(String keyword) {
         nameInput.sendKeys(keyword);
+    }
+
+    public String get_greeting_text() {
+        return greetingText.getText();
     }
 
     public void submit_Form() {
