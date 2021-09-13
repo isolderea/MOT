@@ -1,16 +1,20 @@
 package POC.features.submit;
 
 import net.serenitybdd.junit.runners.SerenityRunner;
-import net.thucydides.core.annotations.Issue;
-import net.thucydides.core.annotations.Managed;
-import net.thucydides.core.annotations.Pending;
-import net.thucydides.core.annotations.Steps;
+import net.thucydides.core.annotations.*;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
 
 import POC.steps.serenity.EndUserSteps;
+
+@Narrative(
+        title = "Submit booking form2",
+        text = {"In order to get in touch with the hotel",
+                "As a user2",
+                "I want to be able to submit a form"}
+)
 
 @RunWith(SerenityRunner.class)
 public class ContactStory {
@@ -34,8 +38,8 @@ public class ContactStory {
         //add code to submit form;
 }
 
-    @Pending @Test
+    @Test
     public void submit_with_errors() {
-        //we will need to check the error here
+        user.are_all_errors_present();
     }
 } 
