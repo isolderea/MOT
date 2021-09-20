@@ -33,9 +33,11 @@ public class ContactStory {
 
     }
 
-    @Pending @Test
+    @Test
     public void submit_contact_form() {
-        //add code to submit form;
+        user.enters_information();
+        user.submit();
+        user.was_form_submitted();
 }
 
     @Test

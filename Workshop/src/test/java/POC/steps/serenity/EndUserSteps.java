@@ -12,10 +12,6 @@ public class EndUserSteps {
     MainPage HomePage;
     ErrorsPage ErrorPage;
 
-    @Step
-    public void enters(String keyword) {
-        HomePage.enter_keywords(keyword);
-    }
 
     @Step
     public void is_the_home_page() {
@@ -27,6 +23,23 @@ public class EndUserSteps {
     @Step
     public void submit() {
         HomePage.submit_Form();
+    }
+
+    @Step
+    public void was_form_submitted() {
+        String text = HomePage.get_greeting_text();
+        assertThat(text, containsString("Thanks"));
+    }
+
+    @Step
+    public void enters_information() {
+        HomePage.open();
+        HomePage.enter_contact_information(
+                "Ioan",
+                "myemail@test.com",
+                "0800999999999",
+                "Workshop",
+                "This is a really nice Workshop");
     }
 
     @Step
