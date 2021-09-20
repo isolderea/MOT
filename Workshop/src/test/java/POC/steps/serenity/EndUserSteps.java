@@ -3,6 +3,7 @@ package POC.steps.serenity;
 import POC.pages.ErrorsPage;
 import POC.pages.MainPage;
 import net.thucydides.core.annotations.Step;
+import net.thucydides.core.annotations.Title;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.*;
@@ -18,6 +19,7 @@ public class EndUserSteps {
     }
 
     @Step
+    @Title("We can change this")
     public void is_the_home_page() {
         HomePage.open();
         String title = HomePage.get_greeting_text();
