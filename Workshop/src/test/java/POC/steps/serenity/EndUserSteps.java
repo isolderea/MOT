@@ -17,7 +17,7 @@ public class EndUserSteps {
     public void is_the_home_page() {
         HomePage.open();
         String title = HomePage.get_greeting_text();
-        assertThat(title, containsString("Welcomed"));
+        assertThat(title, containsString("Welcome"));
     }
 
     @Step
@@ -48,6 +48,6 @@ public class EndUserSteps {
         HomePage.submit_Form();
         //ErrorPage
         int error_number = ErrorPage.get_number_of_errors();
-        assertThat(error_number,equalTo(5));
+        assertThat(error_number,equalTo(8));
     }
 }
